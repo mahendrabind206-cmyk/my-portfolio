@@ -1,4 +1,3 @@
-alert("script.js चल रही है!");
 const BACKEND_URL =
   "https://principles-hobby-pmid-sign.trycloudflare.com";
 async function answerQuestion() {
