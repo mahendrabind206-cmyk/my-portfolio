@@ -1,5 +1,6 @@
 const BACKEND_URL =
   "https://principles-hobby-pmid-sign.trycloudflare.com";
+
 async function answerQuestion() {
   const questionInput = document.getElementById("question");
   const answerBox = document.getElementById("answer");
@@ -7,7 +8,7 @@ async function answerQuestion() {
   const question = questionInput.value.trim();
 
   if (!question) {
-    answerBox.textContent = "😊 पहले कोई सवाल लिखें!";
+    answerBox.textContent = "😊 पहले कोई सवाल लिखिए!";
     return;
   }
 
@@ -19,9 +20,7 @@ async function answerQuestion() {
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify({
-        question: question
-      })
+      body: JSON.stringify({ question })
     });
 
     const data = await response.json();
@@ -37,4 +36,4 @@ async function answerQuestion() {
     answerBox.textContent =
       "माफ़ कीजिए, अभी AI से जवाब नहीं मिल पाया।";
   }
-      }
+    }
