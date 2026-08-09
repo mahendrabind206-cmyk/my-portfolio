@@ -1,5 +1,7 @@
 const BACKEND_URL =
-  "https://fought-ridge-foot-circular.trycloudflare.com";
+ 
+  "https://concord-furnished-assured-caused.trycloudflare.com";
+
 async function answerQuestion() {
   const questionInput = document.getElementById("question");
   const answerBox = document.getElementById("answer");
