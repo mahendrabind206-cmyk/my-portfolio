@@ -1,6 +1,5 @@
 const BACKEND_URL =
-  "https://principles-hobby-pmid-sign.trycloudflare.com";
-
+  "https://fought-ridge-foot-circular.trycloudflare.com";
 async function answerQuestion() {
   const questionInput = document.getElementById("question");
   const answerBox = document.getElementById("answer");
