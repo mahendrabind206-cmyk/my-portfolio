@@ -1,70 +1,193 @@
 <!DOCTYPE html>
-<html>
+<html lang="hi">
 <head>
-    <meta charset="UTF-8">
-    <title>मेरा Portfolio</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .card {
-            background: white;
-            width: 320px;
-            margin: 50px auto;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 0 10px gray;
-        }
+  <title>मेरा पोर्टफोलियो</title>
 
-        img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-        }
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f4f7;
+      color: #222;
+      text-align: center;
+    }
 
-        h1 {
-            color: #333;
-        }
+    header {
+      background: #222;
+      color: white;
+      padding: 30px 15px;
+    }
 
-        p {
-            color: #555;
-        }
+    .profile {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+      margin-bottom: 15px;
+    }
 
-        button {
-            background: blue;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-        }
+    h1 {
+      margin: 10px 0;
+      font-size: 30px;
+    }
 
-        button:hover {
-            background: darkblue;
-        }
-    </style>
+    .container {
+      max-width: 600px;
+      margin: 25px auto;
+      padding: 0 15px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 15px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      margin-top: 0;
+    }
+
+    input,
+    textarea {
+      width: 90%;
+      padding: 12px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      background: #222;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #444;
+    }
+
+    #answer {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      padding: 20px;
+      margin-top: 30px;
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="card">
-    <img src="https://via.placeholder.com/120" alt="Profile Photo">
+  <header>
 
-    <h1>आपका नाम</h1>
+    <!-- अपनी फोटो का नाम यहाँ लिखें -->
+    <img src="photo.jpg" alt="मेरी फोटो" class="profile">
 
-    <p>Web Developer</p>
+    <h1>नमस्ते! 👋</h1>
 
-    <p>मैं HTML, CSS और JavaScript सीख रहा हूँ।</p>
+    <p>मेरा नाम <strong>महेंद्र</strong> है।</p>
 
-    <button onclick="alert('धन्यवाद!')">
-        Contact Me
-    </button>
-</div>
+    <p>मेरी व्यक्तिगत वेबसाइट में आपका स्वागत है।</p>
+
+  </header>
+
+
+  <div class="container">
+
+    <div class="card">
+
+      <h2>मेरे बारे में 😊</h2>
+
+      <p>
+        मैं अपनी वेबसाइट बना रहा हूँ और HTML सीख रहा हूँ।
+        यह मेरा छोटा सा पोर्टफोलियो है।
+      </p>
+
+    </div>
+
+
+    <div class="card">
+
+      <h2>मुझसे कुछ पूछें 💬</h2>
+
+      <p>नीचे अपना सवाल लिखिए:</p>
+
+      <textarea
+        id="question"
+        rows="4"
+        placeholder="यहाँ अपना सवाल लिखें..."
+      ></textarea>
+
+      <br>
+
+      <button onclick="answerQuestion()">
+        जवाब दें 😊
+      </button>
+
+      <div id="answer"></div>
+
+    </div>
+
+
+    <div class="card">
+
+      <h2>मेरी जानकारी 📱</h2>
+
+      <p>🌐 मैं अपनी वेबसाइट बना रहा हूँ।</p>
+
+      <p>💻 मुझे HTML और वेबसाइट बनाना पसंद है।</p>
+
+    </div>
+
+  </div>
+
+
+  <footer>
+
+    <p>© 2026 मेरा पोर्टफोलियो</p>
+
+  </footer>
+
+
+  <script>
+
+    function answerQuestion() {
+
+      let question = document.getElementById("question").value;
+
+      let answer = document.getElementById("answer");
+
+      if (question.trim() === "") {
+
+        answer.innerHTML = "😊 पहले कोई सवाल लिखिए!";
+
+      } else {
+
+        answer.innerHTML =
+          "😄 आपका सवाल मिल गया! धन्यवाद 😊";
+
+      }
+
+    }
+
+  </script>
 
 </body>
-</html>
-
+    </html>
