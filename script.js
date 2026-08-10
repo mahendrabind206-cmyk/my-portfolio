@@ -1,7 +1,5 @@
 const BACKEND_URL =
-  
- "https://loans-win-playlist-thee.trycloudflare.com";
-
+  "https://nov-folder-domain-parenting.trycloudflare.com";
 async function answerQuestion() {
   const questionInput = document.getElementById("question");
   const answerBox = document.getElementById("answer");
