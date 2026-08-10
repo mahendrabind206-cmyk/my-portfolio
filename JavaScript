@@ -1,6 +1,5 @@
-alert("script.js चल रही है!");
 const BACKEND_URL =
-  "https://principles-hobby-pmid-sign.trycloudflare.com";
+  "https://nov-folder-domain-parenting.trycloudflare.com";
 async function answerQuestion() {
   const questionInput = document.getElementById("question");
   const answerBox = document.getElementById("answer");
